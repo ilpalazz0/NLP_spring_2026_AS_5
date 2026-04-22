@@ -132,6 +132,14 @@ a {
   color: #64748b;
 }
 
+.metric-positive {
+  color: #16a34a;
+}
+
+.metric-negative {
+  color: #dc2626;
+}
+
 .kv-list {
   display: flex;
   flex-direction: column;
@@ -199,12 +207,37 @@ a {
 
 .answer-panel {
   min-height: 320px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .answer-content {
   white-space: pre-wrap;
   line-height: 1.6;
   color: #1f2937;
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 4px;
+}
+
+.answer-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.answer-content::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.answer-content::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+
+.answer-content::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }
 
 .retrieved-list {
@@ -443,6 +476,10 @@ a {
 .sample-questions-panel {
   position: sticky;
   top: 28px;
+  max-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .sample-questions-header h3 {
@@ -459,6 +496,9 @@ a {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 4px;
 }
 
 .sample-question-button {

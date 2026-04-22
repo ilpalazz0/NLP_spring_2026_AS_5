@@ -57,7 +57,7 @@ def main() -> None:
     write_jsonl_models(settings.chunks_path, chunks)
 
     embedder = SentenceEmbedder(settings.embedding_model_name)
-    embeddings = embedder.encode([chunk.text for chunk in chunks], batch_size=settings.embedding_batch_size)
+    embeddings = embedder.encode_passages([chunk.text for chunk in chunks], batch_size=settings.embedding_batch_size)
 
     vector_store = ChromaVectorStore(str(settings.chroma_dir))
     vector_store.rebuild(chunks=chunks, embeddings=embeddings)

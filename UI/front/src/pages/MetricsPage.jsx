@@ -9,6 +9,13 @@ function formatValue(value, digits = 4) {
   return value ?? '-'
 }
 
+function deltaClass(value) {
+  if (typeof value !== 'number') return ''
+  if (value > 0) return 'metric-positive'
+  if (value < 0) return 'metric-negative'
+  return ''
+}
+
 function MetricsPage() {
   const [metrics, setMetrics] = useState(null)
   const [error, setError] = useState('')
@@ -44,15 +51,24 @@ function MetricsPage() {
           </div>
 
           <div className="metric-grid">
-            <MetricCard label="EM Delta" value={formatValue(metrics?.improvement?.exact_match_delta)} />
-            <MetricCard label="F1 Delta" value={formatValue(metrics?.improvement?.token_f1_delta)} />
+            <MetricCard
+              label="EM Delta"
+              value={formatValue(metrics?.improvement?.exact_match_delta)}
+              valueClass={deltaClass(metrics?.improvement?.exact_match_delta)}
+            />
+            <MetricCard
+              label="F1 Delta"
+              value={formatValue(metrics?.improvement?.token_f1_delta)}
+              valueClass={deltaClass(metrics?.improvement?.token_f1_delta)}
+            />
             <MetricCard
               label="F1 Relative Lift (%)"
               value={formatValue(metrics?.improvement?.relative_token_f1_lift_pct, 2)}
+              valueClass={deltaClass(metrics?.improvement?.relative_token_f1_lift_pct)}
             />
             <MetricCard
               label="RAG Better Rate"
-              value={formatValue((metrics?.pairwise_outcomes?.rag_better_rate ?? 0) * 100, 2)}
+              value={`${formatValue((metrics?.pairwise_outcomes?.rag_better_rate ?? 0) * 100, 2)}%`}
               subtitle="% of questions where RAG F1 > baseline"
             />
           </div>
@@ -126,6 +142,12 @@ function MetricsPage() {
                 <strong>{formatValue(metrics?.pairwise_outcomes?.baseline_better_count)}</strong>
               </div>
               <div><span>Tied</span><strong>{formatValue(metrics?.pairwise_outcomes?.tied_count)}</strong></div>
+              <div>
+                <span>RAG Win Rate</span>
+                <strong className={deltaClass(metrics?.pairwise_outcomes?.rag_better_rate - 0.5)}>
+                  {formatValue((metrics?.pairwise_outcomes?.rag_better_rate ?? 0) * 100, 1)}%
+                </strong>
+              </div>
             </div>
           </div>
         </>

@@ -29,9 +29,10 @@ def build_rag_prompt(question: str, chunks: Sequence[RetrievedChunk]) -> str:
 QAYDALAR:
 1. Yalnız verilən kontekstdən istifadə et.
 2. Kənar bilik və ya ehtimal əsasında məlumat uydurma.
-3. Cavab kontekstdə yoxdursa, dəqiq bu cümləni yaz:
+3. Cavab kontekstdə yoxdursa `abstained=true` et və cavabda dəqiq bu cümləni yaz:
 "Bu məlumat verilən kontekstdə yoxdur."
-4. Cavab verdikdə uyğun olduqda sonda istifadə etdiyin mənbələri [1], [2] kimi göstər.
+4. Cavab verdikdə istifadə etdiyin mənbələri citation kimi qaytar.
+5. Mütləq JSON qaytar. JSON-dan kənar mətn yazma.
 
 Sual:
 {question}
@@ -39,14 +40,38 @@ Sual:
 Kontekst:
 {context}
 
-Qısa, aydın və dəqiq cavab ver.
+Çıxış formatı (JSON):
+{{
+  "answer": "string",
+  "citations": [
+    {{
+      "source_index": 1,
+      "title": "string",
+      "section_title": "string",
+      "url": "string",
+      "chunk_id": "string",
+      "doc_id": "string"
+    }}
+  ],
+  "abstained": false,
+  "confidence": 0.0
+}}
 """
 
 
 def build_baseline_prompt(question: str) -> str:
     return f"""Sən Azərbaycan dilində sual-cavab köməkçisisən.
-Aşağıdakı suala qısa, aydın və dəqiq cavab ver.
+Kənar bilikdən istifadə edə bilərsən, amma əmin deyilsənsə açıq qeyd et.
+Mütləq JSON qaytar. JSON-dan kənar mətn yazma.
 
 Sual:
 {question}
+
+Çıxış formatı (JSON):
+{{
+  "answer": "string",
+  "citations": [],
+  "abstained": false,
+  "confidence": 0.0
+}}
 """

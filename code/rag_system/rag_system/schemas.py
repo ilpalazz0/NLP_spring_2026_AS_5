@@ -100,12 +100,30 @@ class AskRequest(BaseModel):
     top_k: int | None = None
 
 
+class GeneratedCitation(BaseModel):
+    source_index: int | None = None
+    title: str | None = None
+    section_title: str | None = None
+    url: str | None = None
+    chunk_id: str | None = None
+    doc_id: str | None = None
+
+
+class GeneratedAnswer(BaseModel):
+    answer: str
+    citations: list[GeneratedCitation] = Field(default_factory=list)
+    abstained: bool = False
+    confidence: float = 0.0
+
+
 class AskResponse(BaseModel):
     question: str
     rag_answer: str
     baseline_answer: str
     retrieved_chunks: list[RetrievedChunk]
     top_k: int
+    rag_output: GeneratedAnswer | None = None
+    baseline_output: GeneratedAnswer | None = None
 
 
 class EvaluationExample(BaseModel):

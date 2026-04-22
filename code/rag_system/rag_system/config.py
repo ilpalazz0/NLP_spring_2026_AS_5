@@ -66,7 +66,7 @@ class Settings:
     use_reranker: bool = _to_bool(os.getenv("USE_RERANKER"), False)
     reranker_model_name: str = os.getenv(
         "RERANKER_MODEL_NAME",
-        "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
     )
 
     # API

@@ -26,8 +26,45 @@ function pickFirstNonEmpty(...values) {
   return ''
 }
 
+function extractDisplayText(value) {
+  if (typeof value !== 'string') {
+    return ''
+  }
+  const text = value.trim()
+  if (!text) {
+    return ''
+  }
+  if (text.startsWith('{')) {
+    try {
+      const parsed = JSON.parse(text)
+      if (parsed && typeof parsed.answer === 'string' && parsed.answer.trim()) {
+        return parsed.answer.trim()
+      }
+    } catch {
+      const strictMatch = text.match(/"answer"\s*:\s*"([\s\S]*?)"\s*,\s*"citations"/i)
+      if (strictMatch?.[1]) {
+        return strictMatch[1]
+          .replace(/\\"/g, '"')
+          .replace(/\\n/g, '\n')
+          .replace(/\\t/g, '\t')
+          .trim()
+      }
+      const fallbackMatch = text.match(/"answer"\s*:\s*"([\s\S]*)/i)
+      if (fallbackMatch?.[1]) {
+        return fallbackMatch[1]
+          .replace(/\\"/g, '"')
+          .replace(/\\n/g, '\n')
+          .replace(/\\t/g, '\t')
+          .trim()
+      }
+      return text
+    }
+  }
+  return text
+}
+
 function normalizeAskResponse(response) {
-  const ragAnswer = pickFirstNonEmpty(
+  const ragAnswerRaw = pickFirstNonEmpty(
     response?.rag_answer,
     response?.with_rag_answer,
     response?.answer_with_retrieval,
@@ -36,7 +73,7 @@ function normalizeAskResponse(response) {
     response?.answers?.with_retrieval
   )
 
-  const baselineAnswer = pickFirstNonEmpty(
+  const baselineAnswerRaw = pickFirstNonEmpty(
     response?.baseline_answer,
     response?.plain_answer,
     response?.without_rag_answer,
@@ -46,16 +83,21 @@ function normalizeAskResponse(response) {
     response?.answers?.without_retrieval
   )
 
+  const ragAnswer = extractDisplayText(ragAnswerRaw)
+  const baselineAnswer = extractDisplayText(baselineAnswerRaw)
+
   return {
     ...response,
     rag_answer: ragAnswer || response?.rag_error || 'No answer yet.',
     baseline_answer: baselineAnswer || response?.plain_error || 'No answer yet.',
+    rag_citations: Array.isArray(response?.rag_output?.citations) ? response.rag_output.citations : [],
+    baseline_citations: Array.isArray(response?.baseline_output?.citations) ? response.baseline_output.citations : [],
   }
 }
 
 function AskPage() {
   const [question, setQuestion] = useState('')
-  const [topK, setTopK] = useState(4)
+  const [topK, setTopK] = useState(10)
   const [result, setResult] = useState(null)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -126,6 +168,23 @@ function AskPage() {
           <AnswerPanel title="LLM with Retrieval" content={result?.rag_answer} />
           <AnswerPanel title="LLM without Retrieval" content={result?.baseline_answer} />
         </div>
+
+        {result?.rag_citations?.length ? (
+          <div className="card">
+            <h3>RAG Citations</h3>
+            <div className="retrieved-list">
+              {result.rag_citations.map((citation, index) => (
+                <div key={`${citation.chunk_id || citation.doc_id || 'cite'}-${index}`} className="retrieved-item">
+                  <div className="retrieved-header">
+                    <strong>{citation.title || 'Untitled source'}</strong>
+                    <span>{citation.section_title || 'Section N/A'}</span>
+                  </div>
+                  <p>{citation.url || 'URL not provided'}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         {result?.retrieved_chunks?.length ? (
           <div className="card">

@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
+import json
+import re
 from typing import Any
 
 from fastapi import FastAPI, HTTPException
@@ -13,6 +15,8 @@ from rag_system.schemas import AskRequest
 
 
 app_state: dict[str, AppState] = {}
+ANSWER_FIELD_RE = re.compile(r'"answer"\s*:\s*"(?P<answer>[\s\S]*?)"\s*,\s*"citations"', re.IGNORECASE)
+ANSWER_FALLBACK_RE = re.compile(r'"answer"\s*:\s*"(?P<answer>[\s\S]*)', re.IGNORECASE)
 
 
 def _build_allowed_origins() -> list[str]:
@@ -47,7 +51,26 @@ def _extract_text(value: Any) -> str:
     if value is None:
         return ""
     if isinstance(value, str):
-        return value.strip()
+        text = value.strip()
+        if text.startswith("{"):
+            try:
+                parsed = json.loads(text)
+                if isinstance(parsed, dict):
+                    candidate = parsed.get("answer")
+                    if isinstance(candidate, str) and candidate.strip():
+                        return candidate.strip()
+            except Exception:
+                # Tolerate partially streamed / truncated JSON payloads.
+                match = ANSWER_FIELD_RE.search(text)
+                if not match:
+                    match = ANSWER_FALLBACK_RE.search(text)
+                if match:
+                    candidate = match.group("answer").strip()
+                    # Best-effort unescape for common JSON-escaped strings.
+                    candidate = candidate.replace('\\"', '"').replace("\\n", "\n").replace("\\t", "\t")
+                    if candidate:
+                        return candidate
+        return text
     dumped = _safe_dump(value)
     if isinstance(dumped, dict):
         for key in (
@@ -85,16 +108,6 @@ def _format_sources(retrieved_chunks: list[dict]) -> list[dict]:
             }
         )
     return sources
-
-
-def _build_plain_prompt(question: str) -> str:
-    return (
-        "Sen Azerbaycan dilinde qisa ve faydali cavab veren komekcisen.\n"
-        "Asagidaki suala birbasa cavab ver.\n"
-        "Hec bir retrieval ve xarici kontekst istifade etme.\n\n"
-        f"Sual: {question}\n\n"
-        "Cavab:"
-    )
 
 
 @asynccontextmanager
@@ -191,18 +204,15 @@ async def ask_question(payload: AskRequest):
         if not rag_answer:
             rag_answer = "RAG generation returned no text."
             rag_error = rag_answer
-    except Exception as exc:
-        rag_error = str(exc)
-        rag_answer = f"RAG generation failed: {exc}"
-
-    try:
-        plain_answer = state.generator.generate(_build_plain_prompt(question))
+        plain_answer = _extract_text(dumped.get("baseline_output")) or _extract_text(dumped.get("baseline_answer"))
         if isinstance(plain_answer, str):
             plain_answer = plain_answer.strip()
         if not plain_answer:
             plain_answer = "Direct generation returned no text."
             plain_error = plain_answer
     except Exception as exc:
+        rag_error = str(exc)
+        rag_answer = f"RAG generation failed: {exc}"
         plain_error = str(exc)
         plain_answer = f"Direct generation failed: {exc}"
 

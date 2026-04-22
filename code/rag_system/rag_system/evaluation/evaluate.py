@@ -19,6 +19,8 @@ def evaluate_examples(pipeline: RAGPipeline, examples: list[EvaluationExample], 
     retrieval_doc_rr: list[float] = []
     retrieval_chunk_hits: list[float] = []
     retrieval_chunk_rr: list[float] = []
+    retrieval_doc_hits_at: dict[int, list[float]] = {3: [], 5: [], 10: []}
+    retrieval_chunk_hits_at: dict[int, list[float]] = {3: [], 5: [], 10: []}
     rag_answer_lengths: list[int] = []
     baseline_answer_lengths: list[int] = []
     rag_better_count = 0
@@ -74,6 +76,8 @@ def evaluate_examples(pipeline: RAGPipeline, examples: list[EvaluationExample], 
             rr = reciprocal_rank(retrieved_doc_ids, example.gold_doc_ids)
             retrieval_doc_hits.append(hit)
             retrieval_doc_rr.append(rr)
+            for k in (3, 5, 10):
+                retrieval_doc_hits_at[k].append(hit_at_k(retrieved_doc_ids[:k], example.gold_doc_ids))
             row["retrieval_doc_hit_at_k"] = hit
             row["retrieval_doc_mrr"] = rr
             row["gold_doc_ids"] = example.gold_doc_ids
@@ -83,6 +87,8 @@ def evaluate_examples(pipeline: RAGPipeline, examples: list[EvaluationExample], 
             rr = reciprocal_rank(retrieved_chunk_ids, example.gold_chunk_ids)
             retrieval_chunk_hits.append(hit)
             retrieval_chunk_rr.append(rr)
+            for k in (3, 5, 10):
+                retrieval_chunk_hits_at[k].append(hit_at_k(retrieved_chunk_ids[:k], example.gold_chunk_ids))
             row["retrieval_chunk_hit_at_k"] = hit
             row["retrieval_chunk_mrr"] = rr
             row["gold_chunk_ids"] = example.gold_chunk_ids
@@ -159,6 +165,9 @@ def evaluate_examples(pipeline: RAGPipeline, examples: list[EvaluationExample], 
             "mrr": round(mean(retrieval_doc_rr), 4),
             "hit_at_k_stats": _summary_stats(retrieval_doc_hits),
             "mrr_stats": _summary_stats(retrieval_doc_rr),
+            "hit_at_3": round(mean(retrieval_doc_hits_at[3]), 4) if retrieval_doc_hits_at[3] else 0.0,
+            "hit_at_5": round(mean(retrieval_doc_hits_at[5]), 4) if retrieval_doc_hits_at[5] else 0.0,
+            "hit_at_10": round(mean(retrieval_doc_hits_at[10]), 4) if retrieval_doc_hits_at[10] else 0.0,
         }
 
     if retrieval_chunk_hits:
@@ -167,6 +176,9 @@ def evaluate_examples(pipeline: RAGPipeline, examples: list[EvaluationExample], 
             "mrr": round(mean(retrieval_chunk_rr), 4),
             "hit_at_k_stats": _summary_stats(retrieval_chunk_hits),
             "mrr_stats": _summary_stats(retrieval_chunk_rr),
+            "hit_at_3": round(mean(retrieval_chunk_hits_at[3]), 4) if retrieval_chunk_hits_at[3] else 0.0,
+            "hit_at_5": round(mean(retrieval_chunk_hits_at[5]), 4) if retrieval_chunk_hits_at[5] else 0.0,
+            "hit_at_10": round(mean(retrieval_chunk_hits_at[10]), 4) if retrieval_chunk_hits_at[10] else 0.0,
         }
 
     # Backward-compatibility for older frontend keys.

@@ -23,20 +23,28 @@ class OllamaGenerator(BaseGenerator):
             return ""
 
         base = self.base_url.rstrip("/")
-        url = f"{base}/api/generate"
+        url = f"{base}/api/chat"
 
         payload = {
             "model": self.model_name,
-            "prompt": prompt,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": self.system_prompt
+                    or "You are a helpful Azerbaijani literature assistant. Reply in Azerbaijani.",
+                },
+                {
+                    "role": "user",
+                    "content": prompt,
+                },
+            ],
             "stream": False,
+            "format": "json",
             "options": {
                 "temperature": self.temperature,
                 "num_predict": self.num_predict,
             },
         }
-
-        if self.system_prompt:
-            payload["system"] = self.system_prompt
 
         data = json.dumps(payload).encode("utf-8")
         request = Request(
@@ -69,7 +77,8 @@ class OllamaGenerator(BaseGenerator):
         except Exception as exc:
             raise RuntimeError(f"Invalid JSON from Ollama: {raw[:500]}") from exc
 
-        text = parsed.get("response", "")
+        message = parsed.get("message", {}) if isinstance(parsed, dict) else {}
+        text = message.get("content", "") if isinstance(message, dict) else ""
         if not isinstance(text, str):
             text = str(text)
 
