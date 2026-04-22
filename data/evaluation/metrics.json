@@ -1,0 +1,114 @@
+{
+  "num_examples": 20,
+  "rag": {
+    "exact_match": 0.0,
+    "token_f1": 0.0333,
+    "exact_match_stats": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "token_f1_stats": {
+      "mean": 0.0333,
+      "median": 0.0,
+      "std": 0.048,
+      "min": 0.0,
+      "max": 0.1667
+    },
+    "answer_length_tokens": {
+      "mean": 13.8,
+      "median": 5.0,
+      "min": 5,
+      "max": 60
+    },
+    "empty_answer_rate": 0.0
+  },
+  "baseline": {
+    "exact_match": 0.0,
+    "token_f1": 0.0983,
+    "exact_match_stats": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "token_f1_stats": {
+      "mean": 0.0983,
+      "median": 0.0953,
+      "std": 0.0354,
+      "min": 0.0426,
+      "max": 0.1918
+    },
+    "answer_length_tokens": {
+      "mean": 35.9,
+      "median": 32.5,
+      "min": 15,
+      "max": 62
+    },
+    "empty_answer_rate": 0.0
+  },
+  "improvement": {
+    "exact_match_delta": 0.0,
+    "token_f1_delta": -0.065,
+    "relative_token_f1_lift_pct": -66.1
+  },
+  "pairwise_outcomes": {
+    "rag_better_count": 2,
+    "baseline_better_count": 18,
+    "tied_count": 0,
+    "rag_better_rate": 0.1,
+    "baseline_better_rate": 0.9,
+    "tied_rate": 0.0
+  },
+  "retrieval_docs": {
+    "hit_at_k": 0.25,
+    "mrr": 0.1167,
+    "hit_at_k_stats": {
+      "mean": 0.25,
+      "median": 0.0,
+      "std": 0.433,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "mrr_stats": {
+      "mean": 0.1167,
+      "median": 0.0,
+      "std": 0.2048,
+      "min": 0.0,
+      "max": 0.5
+    }
+  },
+  "retrieval_chunks": {
+    "hit_at_k": 0.05,
+    "mrr": 0.0167,
+    "hit_at_k_stats": {
+      "mean": 0.05,
+      "median": 0.0,
+      "std": 0.2179,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "mrr_stats": {
+      "mean": 0.0167,
+      "median": 0.0,
+      "std": 0.0726,
+      "min": 0.0,
+      "max": 0.3333
+    }
+  },
+  "retrieval": {
+    "hit_at_k": 0.25,
+    "mrr": 0.1167
+  },
+  "settings": {
+    "generation_provider": "ollama",
+    "ollama_model": "qwen2.5:7b-instruct",
+    "embedding_model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "top_k": 4,
+    "use_reranker": false,
+    "reranker_model_name": null
+  }
+}

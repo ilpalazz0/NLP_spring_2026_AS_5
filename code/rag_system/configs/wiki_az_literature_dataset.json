@@ -1,0 +1,38 @@
+{
+  "dataset_name": "wiki_az_literature",
+  "source_type": "paired_jsonl",
+  "documents_path": "data/wiki_az_literature/documents.jsonl",
+  "chunks_path": "data/wiki_az_literature/chunks.jsonl",
+  "manifest_path": "data/wiki_az_literature/manifest.json",
+  "keep_existing_chunks": true,
+  "document_id_field": "doc_id",
+  "title_field": "title",
+  "text_field": "text",
+  "metadata_fields": [
+    "section_title",
+    "language",
+    "source",
+    "source_title",
+    "page_type",
+    "categories",
+    "license",
+    "attribution_required"
+  ],
+  "chunk_id_field": "chunk_id",
+  "chunk_doc_id_field": "doc_id",
+  "chunk_title_field": "title",
+  "chunk_text_field": "text",
+  "chunk_index_field": "chunk_index",
+  "chunk_token_count_field": null,
+  "chunk_section_title_field": "section_title",
+  "chunk_language_field": "language",
+  "chunk_source_field": "source",
+  "chunk_source_title_field": null,
+  "chunk_metadata_fields": [
+    "page_type",
+    "categories"
+  ],
+  "lowercase": false,
+  "strip_html": true,
+  "remove_extra_whitespace": true
+}

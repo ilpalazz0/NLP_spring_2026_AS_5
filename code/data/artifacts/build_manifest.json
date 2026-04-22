@@ -1,0 +1,78 @@
+{
+  "built_at": "2026-04-22T11:13:28.927177Z",
+  "dataset_name": "wiki_az_literature",
+  "source_type": "paired_jsonl",
+  "used_existing_chunks": true,
+  "embedding_model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "chunk_size_tokens": 320,
+  "chunk_overlap_tokens": 64,
+  "min_chunk_tokens": 180,
+  "document_count": 176,
+  "chunk_count": 2401,
+  "total_words": 341987,
+  "chroma_dir": "D:\\ADA\\MS\\Spring 2026\\NLP\\p5\\code\\data\\artifacts\\chroma_db",
+  "source_manifest": {
+    "wiki": "az.wikipedia.org",
+    "seed_pages": [
+      "Azərbaycan ədəbiyyatı",
+      "Azərbaycan yazıçılarının siyahısı"
+    ],
+    "seed_categories": [
+      "Kateqoriya:Azərbaycan yazıçıları",
+      "Kateqoriya:Azərbaycan şairləri",
+      "Kateqoriya:Azərbaycanlı şairlər",
+      "Kateqoriya:Azərbaycan Respublikasının xalq yazıçıları",
+      "Kateqoriya:Azərbaycan Respublikasının xalq şairləri"
+    ],
+    "new_pages_scheduled": 50,
+    "new_pages_processed": 50,
+    "new_documents": 49,
+    "new_chunks": 1174,
+    "total_processed_pages": 150,
+    "documents_total": 186,
+    "chunks_total": 2552,
+    "dataset_stats": {
+      "num_documents": 186,
+      "total_characters": 2630396,
+      "total_tokens": 1356887,
+      "average_characters": 14141.91,
+      "average_tokens": 7295.09,
+      "longest_document": {
+        "doc_id": "f2424cc448c31c2a08fc3374365840cba520ea0c",
+        "title": "Nizami Gəncəvi",
+        "section_title": null,
+        "source_title": "Nizami Gəncəvi",
+        "characters": 122838,
+        "tokens": 56080
+      },
+      "shortest_document": {
+        "doc_id": "d1cc487826f4cfa5367e1c72de3cb68163f97d3e",
+        "title": "Azərbaycan dramaturgiyası",
+        "section_title": null,
+        "source_title": "Azərbaycan dramaturgiyası",
+        "characters": 0,
+        "tokens": 0
+      }
+    },
+    "chunk_size": 320,
+    "overlap": 64,
+    "tokenizer": "Qwen/Qwen2.5-7B-Instruct",
+    "min_delay_s": 1.5,
+    "jitter_s": 0.5,
+    "max_retries": 5,
+    "maxlag": 5,
+    "max_seed_links_per_page": 40,
+    "max_members_per_category": 80,
+    "max_category_pages_per_run": 200,
+    "max_category_batches_per_run": 3,
+    "max_new_pages_per_run": 50,
+    "cache_enabled": true,
+    "license": "CC BY-SA 4.0 / GFDL",
+    "note": "Append-only incremental build. Existing documents/chunks/pages are skipped on later runs.",
+    "outputs": {
+      "documents": "data/wiki_az_literature/documents.jsonl",
+      "chunks": "data/wiki_az_literature/chunks.jsonl",
+      "dataset_stats": "data/wiki_az_literature/dataset_stats.json"
+    }
+  }
+}

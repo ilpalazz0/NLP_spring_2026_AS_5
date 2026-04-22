@@ -1,0 +1,1062 @@
+[
+  {
+    "author": "Abbasqulu aga Bakikhanov",
+    "file_stem": "Gulustani-Irem",
+    "mode": "single_work",
+    "parser": "chapter_headings",
+    "note": "historical prose with FƏSİL headings",
+    "previous_docs": 80,
+    "previous_chunks": 395,
+    "needs_review": true
+  },
+  {
+    "author": "Abbasqulu aga Bakikhanov",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 721,
+    "previous_chunks": 770,
+    "needs_review": false
+  },
+  {
+    "author": "Abdulla Shaiq",
+    "file_stem": "Sechilmish_eserleri_I_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 1504,
+    "previous_chunks": 1545,
+    "needs_review": true
+  },
+  {
+    "author": "Abdulla Shaiq",
+    "file_stem": "Sechilmish_eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 1000,
+    "previous_chunks": 1009,
+    "needs_review": false
+  },
+  {
+    "author": "Abdulla Shaiq",
+    "file_stem": "Sechilmish_eserleri_III_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 1076,
+    "previous_chunks": 1085,
+    "needs_review": true
+  },
+  {
+    "author": "Abdurrahim bey Haqverdiyev",
+    "file_stem": "Sechilmish_eserleri_I_cild",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 1481,
+    "previous_chunks": 1500,
+    "needs_review": true
+  },
+  {
+    "author": "Abdurrahim bey Haqverdiyev",
+    "file_stem": "Sechilmish_eserleri_II_cild",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 1084,
+    "previous_chunks": 1136,
+    "needs_review": true
+  },
+  {
+    "author": "Ahmed Cavad",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 360,
+    "previous_chunks": 365,
+    "needs_review": false
+  },
+  {
+    "author": "Aliaga Vahid",
+    "file_stem": "Qezeller",
+    "mode": "collection",
+    "parser": "page_number_poetry",
+    "note": "poem collection; file-specific separators may vary",
+    "previous_docs": 147,
+    "previous_chunks": 164,
+    "needs_review": false
+  },
+  {
+    "author": "Aliaga Vahid",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 634,
+    "previous_chunks": 675,
+    "needs_review": false
+  },
+  {
+    "author": "Anar",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "all_caps_titles",
+    "note": "prose works separated by ALL-CAPS titles",
+    "previous_docs": 1132,
+    "previous_chunks": 1219,
+    "needs_review": true
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_I_cild_1949-1959",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 745,
+    "previous_chunks": 749,
+    "needs_review": false
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_II_cild_1960-1969",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 521,
+    "previous_chunks": 528,
+    "needs_review": false
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_III_cild_1960-1969",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 586,
+    "previous_chunks": 589,
+    "needs_review": false
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_IV_cild_1970-1979",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 613,
+    "previous_chunks": 620,
+    "needs_review": false
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_IX_cild_Mersiye-Rekviyem_hekayeler_pyesler_tele-radio_pyesler",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "works volume with prose/articles/plays",
+    "previous_docs": 1882,
+    "previous_chunks": 1922,
+    "needs_review": true
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_V_cild_1980-1989",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 541,
+    "previous_chunks": 545,
+    "needs_review": false
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_VI_cild_1990-1999",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 638,
+    "previous_chunks": 643,
+    "needs_review": false
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_VII_cild_2000-2004",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 341,
+    "previous_chunks": 344,
+    "needs_review": false
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_VIII_cild_Son_illerde_yazilmish_muvafiq_cildlere_dushmeyen_ve_yeniden_ishlenen_sheirler",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 410,
+    "previous_chunks": 411,
+    "needs_review": false
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_X_cild_Meqaleler__Edebiyyat_ve_senet",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "works volume with prose/articles/plays",
+    "previous_docs": 1977,
+    "previous_chunks": 2009,
+    "needs_review": true
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_XI_cild_Publisistika",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "works volume with prose/articles/plays",
+    "previous_docs": 1845,
+    "previous_chunks": 1875,
+    "needs_review": true
+  },
+  {
+    "author": "Bahtiyar Vahabzada",
+    "file_stem": "Eserleri_XII_cild_Publisistika",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "works volume with prose/articles/plays",
+    "previous_docs": 1867,
+    "previous_chunks": 1926,
+    "needs_review": true
+  },
+  {
+    "author": "Cafa Cabbarli",
+    "file_stem": "Eserleri_I_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 655,
+    "previous_chunks": 746,
+    "needs_review": false
+  },
+  {
+    "author": "Cafa Cabbarli",
+    "file_stem": "Eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 779,
+    "previous_chunks": 897,
+    "needs_review": false
+  },
+  {
+    "author": "Cafa Cabbarli",
+    "file_stem": "Eserleri_III_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 821,
+    "previous_chunks": 915,
+    "needs_review": false
+  },
+  {
+    "author": "Cafa Cabbarli",
+    "file_stem": "Eserleri_IV_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 560,
+    "previous_chunks": 648,
+    "needs_review": false
+  },
+  {
+    "author": "Calil Mammadquluzada",
+    "file_stem": "Eserleri_I_cild_nesr_dram_eserleri_satirik_sheirler_tercumeler",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "works volume with prose/articles/plays",
+    "previous_docs": 1876,
+    "previous_chunks": 1942,
+    "needs_review": true
+  },
+  {
+    "author": "Cavid Huseyn",
+    "file_stem": "Eserleri_I_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 416,
+    "previous_chunks": 425,
+    "needs_review": false
+  },
+  {
+    "author": "Cavid Huseyn",
+    "file_stem": "Eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 500,
+    "previous_chunks": 507,
+    "needs_review": false
+  },
+  {
+    "author": "Cavid Huseyn",
+    "file_stem": "Eserleri_III_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 442,
+    "previous_chunks": 469,
+    "needs_review": false
+  },
+  {
+    "author": "Cavid Huseyn",
+    "file_stem": "Eserleri_IV_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 249,
+    "previous_chunks": 251,
+    "needs_review": false
+  },
+  {
+    "author": "Cavid Huseyn",
+    "file_stem": "Eserleri_V_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 411,
+    "previous_chunks": 470,
+    "needs_review": false
+  },
+  {
+    "author": "Classical literature",
+    "file_stem": "Azerbaycan_klassik_edebiyyatindan_sechmeler_I_cild_VII-XII_esrler_Azerbaycan_sheiri",
+    "mode": "collection",
+    "parser": "separator_lines",
+    "note": "anthology volume",
+    "previous_docs": 755,
+    "previous_chunks": 770,
+    "needs_review": false
+  },
+  {
+    "author": "Classical literature",
+    "file_stem": "Azerbaycan_klassik_edebiyyatindan_sechmeler_II_cild_XIII-XVI_esrler_Azerbaycan_sheiri",
+    "mode": "collection",
+    "parser": "separator_lines",
+    "note": "anthology volume",
+    "previous_docs": 575,
+    "previous_chunks": 634,
+    "needs_review": false
+  },
+  {
+    "author": "Classical literature",
+    "file_stem": "Azerbaycan_klassik_edebiyyatindan_sechmeler_III_cild_XVII-XVIII_esrler_Azerbaycan_sheiri",
+    "mode": "collection",
+    "parser": "separator_lines",
+    "note": "anthology volume",
+    "previous_docs": 602,
+    "previous_chunks": 684,
+    "needs_review": false
+  },
+  {
+    "author": "Elishir_Nevayi",
+    "file_stem": "Besh_risale",
+    "mode": "collection",
+    "parser": "chapter_headings",
+    "note": "multi-treatise volume",
+    "previous_docs": 638,
+    "previous_chunks": 647,
+    "needs_review": false
+  },
+  {
+    "author": "Elishir_Nevayi",
+    "file_stem": "Elishir_Nevayinin_lirikasi",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "lyric collection",
+    "previous_docs": 17,
+    "previous_chunks": 17,
+    "needs_review": false
+  },
+  {
+    "author": "Elishir_Nevayi",
+    "file_stem": "Eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 952,
+    "previous_chunks": 967,
+    "needs_review": false
+  },
+  {
+    "author": "Elishir_Nevayi",
+    "file_stem": "Ferhad_ve_SHirin",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named narrative work",
+    "previous_docs": 968,
+    "previous_chunks": 970,
+    "needs_review": true
+  },
+  {
+    "author": "Elishir_Nevayi",
+    "file_stem": "Mehbub_ul-qulub",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named prose treatise",
+    "previous_docs": 462,
+    "previous_chunks": 466,
+    "needs_review": true
+  },
+  {
+    "author": "Elishir_Nevayi",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 813,
+    "previous_chunks": 815,
+    "needs_review": false
+  },
+  {
+    "author": "Fadai",
+    "file_stem": "Bextiyarname",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named narrative work",
+    "previous_docs": 322,
+    "previous_chunks": 322,
+    "needs_review": true
+  },
+  {
+    "author": "Fuzuli",
+    "file_stem": "Eserleri_I_cild",
+    "mode": "collection",
+    "parser": "page_number_poetry",
+    "note": "poem boundaries marked by standalone page numbers",
+    "previous_docs": 437,
+    "previous_chunks": 473,
+    "needs_review": false
+  },
+  {
+    "author": "Fuzuli",
+    "file_stem": "Eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 461,
+    "previous_chunks": 470,
+    "needs_review": false
+  },
+  {
+    "author": "Fuzuli",
+    "file_stem": "Eserleri_III_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 420,
+    "previous_chunks": 441,
+    "needs_review": false
+  },
+  {
+    "author": "Fuzuli",
+    "file_stem": "Eserleri_IV_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 511,
+    "previous_chunks": 539,
+    "needs_review": false
+  },
+  {
+    "author": "Fuzuli",
+    "file_stem": "Eserleri_V_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 508,
+    "previous_chunks": 522,
+    "needs_review": false
+  },
+  {
+    "author": "Fuzuli",
+    "file_stem": "Eserleri_VI_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 1058,
+    "previous_chunks": 1098,
+    "needs_review": true
+  },
+  {
+    "author": "Hagani Shirvani",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 937,
+    "previous_chunks": 1036,
+    "needs_review": false
+  },
+  {
+    "author": "Kurban Said",
+    "file_stem": "Eli_ve_Nino",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named novel",
+    "previous_docs": 701,
+    "previous_chunks": 710,
+    "needs_review": true
+  },
+  {
+    "author": "Mahsati Ganjavi",
+    "file_stem": "Rubailer",
+    "mode": "collection",
+    "parser": "separator_lines",
+    "note": "rubai collection",
+    "previous_docs": 157,
+    "previous_chunks": 159,
+    "needs_review": false
+  },
+  {
+    "author": "Mammad Said Ordubadi",
+    "file_stem": "Qilinc_ve_qelem_I_hisse",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named novel part",
+    "previous_docs": 1043,
+    "previous_chunks": 1059,
+    "needs_review": true
+  },
+  {
+    "author": "Mammad Said Ordubadi",
+    "file_stem": "Qilinc_ve_qelem_II_hisse",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named novel part",
+    "previous_docs": 1285,
+    "previous_chunks": 1294,
+    "needs_review": true
+  },
+  {
+    "author": "Masihi",
+    "file_stem": "Verqa_ve_Gulsha",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named narrative poem",
+    "previous_docs": 420,
+    "previous_chunks": 502,
+    "needs_review": true
+  },
+  {
+    "author": "Mikayil Mushviq",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 549,
+    "previous_chunks": 554,
+    "needs_review": false
+  },
+  {
+    "author": "Mir Calal",
+    "file_stem": "Sechilmish_eserleri-2",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 1151,
+    "previous_chunks": 1163,
+    "needs_review": true
+  },
+  {
+    "author": "Mir Calal",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 634,
+    "previous_chunks": 675,
+    "needs_review": false
+  },
+  {
+    "author": "Mir Calal",
+    "file_stem": "Sechilmish_eserleri_I_cild_Hekayeler",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 1171,
+    "previous_chunks": 1180,
+    "needs_review": true
+  },
+  {
+    "author": "Mir Calal",
+    "file_stem": "Sechilmish_eserleri_II_cild_Hekayeler",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 1093,
+    "previous_chunks": 1112,
+    "needs_review": true
+  },
+  {
+    "author": "Mir Calal",
+    "file_stem": "Sechilmish_eserleri_III_cild_Hekayeler",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 1070,
+    "previous_chunks": 1089,
+    "needs_review": true
+  },
+  {
+    "author": "Mir Calal",
+    "file_stem": "Sechilmish_eserleri_IV_cild_Hekayeler",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 1021,
+    "previous_chunks": 1036,
+    "needs_review": true
+  },
+  {
+    "author": "Mir Calal",
+    "file_stem": "Sechilmish_eserleri_V_cild_Felyetonlar_sheirler_ocherkler_tercumeler_xatireler",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 762,
+    "previous_chunks": 778,
+    "needs_review": false
+  },
+  {
+    "author": "Mirza Fatali Axundzade",
+    "file_stem": "Eserleri_I_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 825,
+    "previous_chunks": 847,
+    "needs_review": false
+  },
+  {
+    "author": "Mirza Fatali Axundzade",
+    "file_stem": "Eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 837,
+    "previous_chunks": 959,
+    "needs_review": false
+  },
+  {
+    "author": "Mirza Fatali Axundzade",
+    "file_stem": "Eserleri_III_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 886,
+    "previous_chunks": 914,
+    "needs_review": false
+  },
+  {
+    "author": "Mirza Shafi Vazeh",
+    "file_stem": "Negmeler",
+    "mode": "collection",
+    "parser": "separator_lines",
+    "note": "lyric collection",
+    "previous_docs": 99,
+    "previous_chunks": 100,
+    "needs_review": false
+  },
+  {
+    "author": "Nabati",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 239,
+    "previous_chunks": 268,
+    "needs_review": false
+  },
+  {
+    "author": "Nacaf bey Vazirov",
+    "file_stem": "Eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 1149,
+    "previous_chunks": 1193,
+    "needs_review": true
+  },
+  {
+    "author": "Natavan",
+    "file_stem": "Eserleri",
+    "mode": "collection",
+    "parser": "ornamental_dividers",
+    "note": "poems separated by OCR ornamental divider lines",
+    "previous_docs": 69,
+    "previous_chunks": 71,
+    "needs_review": false
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Fitne",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "short named work",
+    "previous_docs": 16,
+    "previous_chunks": 16,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Ilin_fesilleri",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "short named work",
+    "previous_docs": 6,
+    "previous_chunks": 6,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Iskendername__Iqbalname",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named book of Iskendername",
+    "previous_docs": 525,
+    "previous_chunks": 587,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Iskendername__SHerefname",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named book of Iskendername",
+    "previous_docs": 943,
+    "previous_chunks": 1038,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Kerpickesen",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "short named work",
+    "previous_docs": 3,
+    "previous_chunks": 3,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Leyli_ve_Mecnun-2",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named narrative poem",
+    "previous_docs": 539,
+    "previous_chunks": 546,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Lirika",
+    "mode": "collection",
+    "parser": "separator_lines",
+    "note": "lyric collection",
+    "previous_docs": 135,
+    "previous_chunks": 141,
+    "needs_review": false
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "SHah_ve_xidmetchi",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "short named work",
+    "previous_docs": 4,
+    "previous_chunks": 4,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Simnar",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "short named work",
+    "previous_docs": 5,
+    "previous_chunks": 5,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Sirler_xezinesi",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named narrative poem",
+    "previous_docs": 402,
+    "previous_chunks": 463,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Turkustan_gozelinin_hekayeti",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "short named work",
+    "previous_docs": 6,
+    "previous_chunks": 6,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Xeyir_ve_SHer",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "short named work",
+    "previous_docs": 13,
+    "previous_chunks": 14,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Xosrov_ve_SHirin",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named narrative poem",
+    "previous_docs": 855,
+    "previous_chunks": 862,
+    "needs_review": true
+  },
+  {
+    "author": "Nizami Ganjavi",
+    "file_stem": "Yeddi_gozel",
+    "mode": "single_work",
+    "parser": "single_body",
+    "note": "named narrative poem",
+    "previous_docs": 719,
+    "previous_chunks": 732,
+    "needs_review": true
+  },
+  {
+    "author": "Qovsi Tabrizi Alican",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 422,
+    "previous_chunks": 484,
+    "needs_review": false
+  },
+  {
+    "author": "Sabir",
+    "file_stem": "Hophopname_I_cild",
+    "mode": "collection",
+    "parser": "separator_lines",
+    "note": "satirical poetry collection",
+    "previous_docs": 659,
+    "previous_chunks": 744,
+    "needs_review": false
+  },
+  {
+    "author": "Sabir",
+    "file_stem": "Hophopname_II_cild",
+    "mode": "collection",
+    "parser": "separator_lines",
+    "note": "satirical poetry collection",
+    "previous_docs": 508,
+    "previous_chunks": 606,
+    "needs_review": false
+  },
+  {
+    "author": "Samad Vurgun",
+    "file_stem": "Sechilmish_eserleri_I_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 357,
+    "previous_chunks": 362,
+    "needs_review": false
+  },
+  {
+    "author": "Samad Vurgun",
+    "file_stem": "Sechilmish_eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 378,
+    "previous_chunks": 383,
+    "needs_review": false
+  },
+  {
+    "author": "Samad Vurgun",
+    "file_stem": "Sechilmish_eserleri_III_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 768,
+    "previous_chunks": 770,
+    "needs_review": false
+  },
+  {
+    "author": "Samad Vurgun",
+    "file_stem": "Sechilmish_eserleri_IV_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 461,
+    "previous_chunks": 462,
+    "needs_review": false
+  },
+  {
+    "author": "Samad Vurgun",
+    "file_stem": "Sechilmish_eserleri_V_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 1317,
+    "previous_chunks": 1341,
+    "needs_review": true
+  },
+  {
+    "author": "Seyid Azim Shirvani",
+    "file_stem": "Sechilmish_eserleri_I_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 362,
+    "previous_chunks": 408,
+    "needs_review": false
+  },
+  {
+    "author": "Seyid Azim Shirvani",
+    "file_stem": "Sechilmish_eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 560,
+    "previous_chunks": 580,
+    "needs_review": false
+  },
+  {
+    "author": "Shah Ismail Xatai",
+    "file_stem": "Eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 443,
+    "previous_chunks": 498,
+    "needs_review": false
+  },
+  {
+    "author": "Sidqi Mahammad Tagi",
+    "file_stem": "Eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 629,
+    "previous_chunks": 646,
+    "needs_review": false
+  },
+  {
+    "author": "Suleyman Rahimov",
+    "file_stem": "Sechilmish_eserleri_I_cild",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 494,
+    "previous_chunks": 646,
+    "needs_review": false
+  },
+  {
+    "author": "Suleyman Rahimov",
+    "file_stem": "Sechilmish_eserleri_II_cild",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 636,
+    "previous_chunks": 788,
+    "needs_review": false
+  },
+  {
+    "author": "Suleyman Rustam",
+    "file_stem": "Sechilmish_eserleri_I_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 450,
+    "previous_chunks": 462,
+    "needs_review": false
+  },
+  {
+    "author": "Suleyman Rustam",
+    "file_stem": "Sechilmish_eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 737,
+    "previous_chunks": 745,
+    "needs_review": false
+  },
+  {
+    "author": "Suleyman Rustam",
+    "file_stem": "Sechilmish_eserleri_III_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "selected works volume",
+    "previous_docs": 468,
+    "previous_chunks": 470,
+    "needs_review": false
+  },
+  {
+    "author": "Suleyman Sani Ahundov",
+    "file_stem": "Sechilmish_eserleri",
+    "mode": "collection",
+    "parser": "work_headings",
+    "note": "selected works volume, likely prose/article headings",
+    "previous_docs": 963,
+    "previous_chunks": 1087,
+    "needs_review": false
+  },
+  {
+    "author": "Vaqif",
+    "file_stem": "Eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 262,
+    "previous_chunks": 289,
+    "needs_review": false
+  },
+  {
+    "author": "Vidadi",
+    "file_stem": "Eserleri",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 107,
+    "previous_chunks": 115,
+    "needs_review": false
+  },
+  {
+    "author": "Yusif Vazir Chemenzemenli",
+    "file_stem": "Eserleri_I_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 1064,
+    "previous_chunks": 1078,
+    "needs_review": true
+  },
+  {
+    "author": "Yusif Vazir Chemenzemenli",
+    "file_stem": "Eserleri_II_cild",
+    "mode": "collection",
+    "parser": "title_headings",
+    "note": "works volume",
+    "previous_docs": 2118,
+    "previous_chunks": 2133,
+    "needs_review": true
+  }
+]
